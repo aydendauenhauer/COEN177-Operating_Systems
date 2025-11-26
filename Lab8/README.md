@@ -1,0 +1,1 @@
+This repository contains my Lab 8 project for COEN 177, where I implemented a memory management simulator to model three page replacement algorithms: FIFO, LRU, and Second Chance. The lab runs each algorithm over a large reference string with different frame (cache) sizes, measures page faults and hit rates, and compares their average performance using summary tables and graphs.
