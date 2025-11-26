@@ -1,0 +1,24 @@
+Part 1:
+Program has no errors, but cannot be run through IDE, must be run through gcc compiler.
+
+Part 2:
+Compiles without errors or warnings. File named ExecutableName is created in the same directory as lab2_part1.c
+
+Part 3:
+When attempting to run the file by typing “./ExecutableName” in the gcc, a segfault error is thrown and the program doesn’t run
+
+Part 4:
+When typing “./ExecutableName 3000” in the gcc, the program is able to run. It prints 99 Child Processes and 99 Parent Processes.
+When typing “./ExecutableName 500” in the gcc, the program finishes faster and has a different order of Child Process / Parents Process.
+When typing “./ExecutableName 5000” in the gcc, the program finishes slower and has a different order of Child Process / Parents Process as well.
+
+Part 5:
+Program is able to compile and run properly.
+
+Part 6:
+Program is able to compile and run properly.
+
+Part 7:
+Program is able to compile and run properly.
+
+
