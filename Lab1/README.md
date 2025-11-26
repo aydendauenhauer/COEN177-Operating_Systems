@@ -1,0 +1,1 @@
+This repository contains my Lab 1 project for COEN 177, where I wrote basic Unix/Linux shell scripts to explore command-line tools and shell programming by listing files, counting lines, displaying environment variables, checking the logged-in user, and interactively computing the area of rectangles and circles in a loop.
