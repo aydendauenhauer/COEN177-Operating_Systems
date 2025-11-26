@@ -1,0 +1,1 @@
+This repository contains my Homework 2 for COEN 177, where I wrote time.c, a C program that measures how long a given command takes to run by forking a child process, recording the start time with gettimeofday, executing the command via execvp, and then computing the elapsed wall-clock time in the parent after the child finishes.
