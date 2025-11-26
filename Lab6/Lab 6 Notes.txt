@@ -1,0 +1,40 @@
+//Name: Ayden Dauenhauer
+//Date: Feb. 17, 2025
+//Title: Lab6 – Minix operating system
+//Description: To setup a virtual machine and install Minix as a guest operating system and understand Minix sufficiently to modify and re-build the Minix kernel
+
+
+Step 1:
+To connect to the ECC, follow the steps on this link: https://www.scu.edu/engineering/labs--research/labs/engineering-computing-center/connect-to-the-ecc-linux-platform-using-the-graphical-interface/
+
+Step 2:
+Start by launching VirtualBox. Go to the Activities menu, select Show Applications, go to the next page, and click on Oracle VirtualBox
+Then, select Expert Mode on the far right, then click the three dots menu on Tools, select Networks, go to Host-only Networks, and click Create to create a network called vboxnet0.
+Under the Properties menu, select DHCP Server, Enable Server, and Apply
+
+Step 3:
+Follow steps at lab handout at "Return here if you had to delete MINIX:" to "Return here if you had to reboot MINIX:"
+
+Step 4:
+Inside the VM, go to the host machine's file browser, select Other Locations, and in the
+Connect to Server box, type ftp://<IP>, replacing <IP> with the IP address from ifconfig
+
+Authorize with username: root and the set password
+
+Step 5:
+Click on the 'root on <IP>' at the top of the file browser
+Go into the usr folder
+Go into the src folder
+Go into kernel folder
+Double click main.c to open for editing
+On line 275 change to current date, your name, and your location
+Click save at the top
+
+Step 6:
+Go to the MINIX command line and using cd go to /usr/src 
+Type make world while in the /usr/src directory
+Type shutdown, then type exit and immediately press 2
+
+Step 7:
+You'll see your changes
+Leave as is since you can't scroll up
