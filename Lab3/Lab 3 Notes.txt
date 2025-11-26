@@ -1,0 +1,65 @@
+Part 1:
+Code is able to compile and execute. The program executes the ls command however it uses the more command to separate the output from the ls command into new lines. In my case the output is:
+Part1Executable
+lab3_part1.c
+
+
+Part 2:
+Code is able to compile and execute. The program writes the command line into the pipe, reads it, then prints the command linen character by character. In my case the output is:
+Writer on the upstream end of the pipe -> 1 arguments
+
+Reader on the downstream end of the pipe
+. / P a r t 2 E x e c u t a b l e
+
+
+I tested the program again by adding another argument (./Part2Executable 500) to the command line and it output:
+Writer on the upstream end of the pipe -> 2 arguments
+
+Reader on the downstream end of the pipe
+. / P a r t 2 E x e c u t a b l e 5 0 0
+
+
+Part 3:
+I changed part 2 such that the output from the 'ls' command is sent to the upstream and prints. The output is:
+Writer on the upstream end of the pipe -> output from 'ls' command
+
+Reader on the downstream end of the pipe
+Part1Executable Part3Executable lab3_part2.c
+Part2Executable lab3_part1.c lab3_part3.c
+
+
+Part 4:
+I changed part 1 such that the output from the 'cat /etc/passwd | grep root' is printed. The output is:
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+
+
+Part 5:
+I was able to create a program such that the output is infinite appearances of:
+consumer received: producer
+
+
+Part 6:
+The code compiles, but there is 1 warning. When running the executable, the output is:
+Hello from thread 1861332992 with iteration 1
+Hello from thread 1861906432 with iteration 5
+Thread 0 returned
+Thread 1 returned
+Thread 2 returned
+Hello from thread 1862479872 with iteration 2
+Hello from thread 1863053312 with iteration 2
+Hello from thread 1863626752 with iteration 2
+Hello from thread 1864200192 with iteration 2
+Hello from thread 1864773632 with iteration 2
+Hello from thread 1865347072 with iteration 2
+Hello from thread 1865920512 with iteration 2
+Hello from thread 1866493952 with iteration 2
+Thread 3 returned
+Thread 4 returned
+Thread 5 returned
+Thread 6 returned
+Thread 7 returned
+Thread 8 returned
+Thread 9 returned
+Main thread done.
