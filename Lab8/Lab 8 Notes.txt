@@ -1,0 +1,25 @@
+//Name: Ayden Dauenhauer
+//Date: Mar. 3, 2025
+//Title: Lab8 – Memory Management
+//Description: To simulate three basic page replacement algorithms and evaluate the comparative performance of these algorithms with different cache sizes
+
+FIFO:
+Iterates through the cache array to check if the page is already present.
+If found, it sets foundInCache = true and breaks out of the loop.
+If the page is not found in the cache, a page fault occurs:
+The page number is printed.
+It is stored in the cache at placeInArray (the position where the oldest page was stored).
+totalFaults is incremented to count the number of page faults.
+placeInArray is updated using (placeInArray + 1) % cacheSize to move to the next position in a circular buffer.
+
+LRU:
+Tracks last access time of each page using lastUsed.
+If a page is already in cache, updates its lastUsed timestamp.
+If the page is not in cache, uses an empty slot if available.
+Otherwise, finds and replaces the least recently used page.
+
+Second Chance:
+Gives pages a "second chance" before replacement. It tracks whether a page was recently used with a reference bit (ref).
+If a page is found in the cache, its ref is set to 1.
+If not, the algorithm looks for a page to replace by checking the ref of the current pointer position.
+If ref == 1, it resets ref to 0 and moves forward until it finds a page with ref == 0, which is then replaced. 
