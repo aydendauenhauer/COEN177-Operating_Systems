@@ -1,0 +1,36 @@
+Part 1:
+Code is able to compile and execute. However, I compiled and ran the program but wanted to changed the executable name, so I ctrl + c to end the exec prematurely.
+This caused the program to not be able to run with the same semaphore name. By changing the semaphore name it was able to run again.
+I tried changing the semaphore name back to the original but it didn't run (I might have corrupted that semaphore name on my mac)
+The program creates 10 threads (0-9) and uses synchronization to maintain order. It has consistent printing which makes it different from threadHello.c. It prints the following consistently:
+Thread 0 Entered Critical Section..
+Thread 1 Entered Critical Section..
+            Thread 0 returned 
+Thread 2 Entered Critical Section..
+            Thread 1 returned 
+Thread 3 Entered Critical Section..
+            Thread 2 returned 
+Thread 4 Entered Critical Section..
+            Thread 3 returned 
+Thread 5 Entered Critical Section..
+            Thread 4 returned 
+Thread 6 Entered Critical Section..
+            Thread 5 returned 
+Thread 7 Entered Critical Section..
+            Thread 6 returned 
+Thread 8 Entered Critical Section..
+            Thread 7 returned 
+Thread 9 Entered Critical Section..
+            Thread 8 returned 
+            Thread 9 returned 
+Main thread done.
+
+Part 2:
+I simply needed to declare a mutex instead of a semaphore, then change the entry and exit section to use locks. Then initialize the mutex at the start of main and destroy it at the end.
+It prints the exact same output as part 1.
+
+Part 3:
+I used the pseudocode and filled in with the necessary syntax. For the producer I simply incremented a counter variable, i. The program prints very fast, so be prepared to ctrl + c.
+
+Part 4:
+I used the pseudocode and filled in with the necessary syntax. This time the producer and consumer functions used a while loop, however it still increments a counter variable, i. The program prints very fast, so be prepared to ctrl + c.
