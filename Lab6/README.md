@@ -1,0 +1,1 @@
+This repository contains my Lab 6 project for COEN 177, where I set up a MINIX virtual machine in VirtualBox, configured host-only networking, connected via FTP, edited the MINIX kernel main.c to add a custom identification line, rebuilt the system with make world, and rebooted to verify the modified kernel.
