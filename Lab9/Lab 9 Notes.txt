@@ -1,0 +1,25 @@
+//Name: Ayden Dauenhauer
+//Date: Mar. 10, 2025
+//Title: Lab9 – File Performance Measurement
+//Description: To evaluate file system performance in the face of sequential I/O requests, mainly disk reads and writes and evaluate the impact of multiple competing threads attempting to read/write simultaneously
+
+Step 2:
+Baseline performance -- file1.bin and file4.bin are slower; sys time is low.
+
+Step 3:
+Buffer size impact -- Larger buffers drastically improve performance, but file4.bin remains slow.
+
+Step 4:
+File-specific performance -- Buffering helps most files, but large ones still suffer from system overhead.
+
+Step 5:
+Multi-threading impact -- Threading improves performance up to a point, but high thread counts degrade performance due to system overhead.
+
+Notes:
+Small buffers result in higher overhead due to frequent system calls.
+Large buffers consistently offer the best performance.
+File 4 has longer execution times, due to its large size.
+Smaller files quickly stabilize in execution time.
+Works best with moderate thread counts (2–8).
+High thread counts (32, 64) can introduce excessive system overhead, leading to worse performance.
+Larger buffers mitigate the negative effects of multi-threading.
