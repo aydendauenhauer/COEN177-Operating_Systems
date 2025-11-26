@@ -1,0 +1,1 @@
+This repository contains my Lab 4 project for COEN 177, where I explored POSIX threads by writing C programs that create and manage multiple threads, observe nondeterministic output when threads are not properly synchronized, and implement a multithreaded matrix multiplication where each row of the result is computed by a separate thread.
