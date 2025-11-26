@@ -1,0 +1,73 @@
+Part 1:
+Code is able to compile and execute. The program creates 20 threads (0-19), which each print "Hello from thread ___ with thread ID ___" as well as "Thread ___ returned" with the ___ being replaced with their values.
+Here is an example of an output:
+Hello from thread 6126448640 with thread ID 1 
+Hello from thread 6127022080 with thread ID 7 
+Hello from thread 6127595520 with thread ID 8 
+Hello from thread 6128168960 with thread ID 9 
+Thread 0 returned 
+Thread 1 returned 
+Thread 2 returned 
+Thread 3 returned 
+Hello from thread 6128742400 with thread ID 4 
+Hello from thread 6130462720 with thread ID 4 
+Hello from thread 6129315840 with thread ID 4 
+Hello from thread 6131609600 with thread ID 4 
+Hello from thread 6132756480 with thread ID 4 
+Hello from thread 6132183040 with thread ID 4 
+Hello from thread 6133329920 with thread ID 4 
+Hello from thread 6129889280 with thread ID 4 
+Hello from thread 6131036160 with thread ID 4 
+Hello from thread 6137344000 with thread ID 4 
+Hello from thread 6133903360 with thread ID 4 
+Hello from thread 6134476800 with thread ID 4 
+Hello from thread 6136197120 with thread ID 4 
+Hello from thread 6136770560 with thread ID 4 
+Hello from thread 6135623680 with thread ID 4 
+Hello from thread 6135050240 with thread ID 4 
+Thread 4 returned 
+Thread 5 returned 
+Thread 6 returned 
+Thread 7 returned 
+Thread 8 returned 
+Thread 9 returned 
+Thread 10 returned 
+Thread 11 returned 
+Thread 12 returned 
+Thread 13 returned 
+Thread 14 returned 
+Thread 15 returned 
+Thread 16 returned 
+Thread 17 returned 
+Thread 18 returned 
+Thread 19 returned 
+Main thread done.
+
+Part 2:
+Code is able to compile and execute. The program creates 20 threads, which each print "Hello from thread ___ with thread ID ___". I sometimes encountered times where the program would print 16 threads or 0 threads. 
+Here is an example of an output:
+Hello from thread 6101364736 with thread ID 4 
+Hello from thread 6104231936 with thread ID 7 
+Hello from thread 6103658496 with thread ID 7 
+Hello from thread 6104805376 with thread ID 8 
+Hello from thread 6102511616 with thread ID 4 
+Hello from thread 6103085056 with thread ID 5 
+Hello from thread 6101938176 with thread ID 6 
+Hello from thread 6105378816 with thread ID 9 
+Hello from thread 6105952256 with thread ID 10 
+Hello from thread 6106525696 with thread ID 11 
+Hello from thread 6100791296 with thread ID 4 
+Hello from thread 6107099136 with thread ID 12 
+Hello from thread 6107672576 with thread ID 13 
+Hello from thread 6108246016 with thread ID 14 
+Hello from thread 6108819456 with thread ID 15 
+Hello from thread 6109966336 with thread ID 17 
+Hello from thread 6109392896 with thread ID 16 
+Hello from thread 6110539776 with thread ID 18 
+Main thread done.
+Hello from thread 6111686656 with thread ID 20
+
+* It is important to note that the values for both part 1 and 2 change for every execute.
+
+Part 3:
+I was able to create the program by using the given code to randomly fill the matrices and multiply the rows. I simply had to create threads for each row, then use a nested for loop to print the C matrix.
