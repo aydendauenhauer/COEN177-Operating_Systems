@@ -1,0 +1,32 @@
+//Name: Ayden Dauenhauer
+//Date: Feb. 24, 2025
+//Title: Lab7 – Minix scheduling
+//Description: To understand Minix scheduler implementation and modify the Minix scheduler and observe changes
+
+To modify the queue selection algorithm to skew the priority scheduling so that it sometimes choose to ignore an available job queue and run some lower priority queue instead,
+I changed the proc.c in the usr/src/kernel folder. The function I edited was pick_proc(). I added another if condition after the if statement which checks if the queue is empty.
+The if statement I added will randomly go to the next queue 10% of the time. Here is a snippet of the code:
+
+PRIVATE struct proc * pick_proc(void)
+{
+/* Decide who to run now. A new process is selected an returned.
+ * When a billable process is selected, record it in 'bill_ptr', so that the
+ * clock task can tell who to bill for system time.
+ */
+  register struct proc *rp;			/* process to run */
+  int q;				/* iterate over queues */
+
+  /* Check each of the scheduling queues for ready processes. The number of
+   * queues is defined in proc.h, and priorities are set in the task table.
+   * The lowest queue contains IDLE, which is always ready.
+   */
+  for (q=0; q < NR_SCHED_QUEUES; q++) {
+  	if(!(rp = rdy_head[q])) {
+  		TRACE(VF_PICKPROC, printf("queue %d empty\n", q););
+  		continue;
+
+  	if ((rand() % 100) < 10) {
+  		continue;
+  	}
+
+I noticed that after performing make world and rebooting the system, the reboot took longer.
